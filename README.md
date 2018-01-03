@@ -17,10 +17,10 @@ PC Setup
 
 Performance comparison over increasing number of elements
 
-    | Number of elements | Time to complete sorting |
-    | :----------------- | :----------------------- |
-    | 1024               | 4.5 ms                   |
-    | 1024*1024          | 65 ms                    |
-    | 16*1024*1024       | 805 ms                   |
-    | 32*1024*1024       | 1560 ms                  |
-    | > 32*1024*1024     | not enough GPU memory    |
+| Number of elements | Time to complete sorting |
+| :----------------- | :----------------------- |
+| 1024               | 4.5 ms                   |
+| 1024*1024          | 65 ms                    |
+| 16*1024*1024       | 805 ms                   |
+| 32*1024*1024       | 1560 ms                  |
+| > 32*1024*1024     | not enough GPU memory    |
