@@ -28,6 +28,14 @@ void get_vec(int numels, int *source, int *dest) {
 	check_cuda(err, "cudaMemcpy");
 }
 
+extern __shared__ int shmem[];
+
+__device__ int check_bit(int num, int bit_pos) {
+	int bit = (num >> bit_pos) & 3;
+
+	return bit;
+}
+
 __global__ void radixsort(int numels, const int *__restrict__ in_vec, int *__restrict__ pos_vec, int *__restrict__ state_vec, int bit_pos) {
 	int i = blockDim.x * blockIdx.x + threadIdx.x;
 	int r_number;
